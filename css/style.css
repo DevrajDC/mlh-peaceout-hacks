@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg: #191921;
+    --light-purple:#9D90FC;
+}
+
+body {
+    color: white;
+    background-color: var(--body-bg);
+    font-family: 'Poppins', sans-serif ;
+    max-width: 1200px;
+    margin:auto;
+}
+
+/* Navbar design starts here  */
+div.navbar{
+    display: flex;
+    height: 7rem;
+    align-items: center;
+    justify-content: space-between;
+}
+div.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+div.navbar ul {
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+ul.navbar-ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+button {
+   height: 2.5rem;
+   width: 10rem;
+   border-radius: 1.6rem;
+   background-color: var(--light-purple);
+   border: none;
+   color: white;
+   font-weight: bold;
+}
+
+div.section-1 {
+    display: flex;
+    align-items: center;
+}
+
+div.intro-content {
+    display: flex;
+    flex-direction: column;
+}
+
+h1.intro-head {
+  font-size: 36px;
+  text-align: left;
+  width: 80%;
+}
+
+p.intro-content {
+    width: 80%;
+    margin: 1.6rem  auto 1.6rem 0 ;
+    text-align: left;
+}
+
+div.section-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 8rem auto 0rem auto;
+}
+
+h1.mood-selection-head {
+    font-size: 36px;
+    text-align: center;
+}
+
+div.mood-selection-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 4rem auto;
+    align-items: center;
+}
+
+div.mood-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+div.mood-list div {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    width: 100%;
+}
+
+@keyframes cloud-float {
+    0% {
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+div.mood-list div img {
+    transition: all 0.2s ease;
+    animation: cloud-float 2s infinite;
+}
+
+div.mood-list :nth-child(2) img {
+    animation-delay: 2s;
+}
+
+
+div.direct-recommend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.reason-for-direct {
+    font-size: 24px;
+}
+
+button.recommend {
+    height: 3.5rem;
+    width: 15rem;
+    border-radius: 2.5rem;
+    margin: 1rem auto;
+}
+
+
+
+
