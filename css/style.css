@@ -15,7 +15,7 @@ html, body {
     font-family: 'Poppins', sans-serif ;
     max-width: 1200px;
     margin:auto;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     scroll-behavior: smooth;
 }
 a{
@@ -183,8 +183,9 @@ button.recommend {
 
 /* Media queries */
 @media only screen and (max-width: 600px) {
-    body{
-        margin: 0 20px;
+    html, body{
+        overflow-x: hidden;
+        margin: 0 0.8rem;
     }
     .section-1{
         flex-direction: column;
@@ -215,3 +216,15 @@ button.recommend {
     }
 }
 
+/* footer */
+.footer{
+    /* background-color: var(--light-purple); */
+    padding: 1rem 0;
+    border-top: 1px solid var(--light-purple);
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.footer a{
+    color: var(--light-purple);
+}
