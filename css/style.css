@@ -9,12 +9,18 @@
     --light-purple:#9D90FC;
 }
 
-body {
+html, body {
     color: white;
     background-color: var(--body-bg);
     font-family: 'Poppins', sans-serif ;
     max-width: 1200px;
     margin:auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
 
 /* Navbar design starts here  */
@@ -25,15 +31,13 @@ div.navbar{
     justify-content: space-between;
 }
 div.logo {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
 div.navbar ul {
     display: flex;
-    width: 40%;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 ul.navbar-ul li {
@@ -42,13 +46,24 @@ ul.navbar-ul li {
 }
 
 button {
-   height: 2.5rem;
-   width: 10rem;
+   padding: .8rem 2rem;
    border-radius: 1.6rem;
    background-color: var(--light-purple);
    border: none;
    color: white;
    font-weight: bold;
+   cursor: pointer;
+   width: fit-content;
+}
+.navbar button {
+    margin-left: 1rem;
+   padding: .8rem 2rem;
+   border-radius: 1.6rem;
+   background-color: var(--light-purple);
+   border: none;
+   color: white;
+   font-weight: bold;
+   cursor: pointer;
 }
 
 div.section-1 {
@@ -114,9 +129,6 @@ div.mood-list {
 }
 
 div.mood-list div {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     width: 100%;
 }
 
@@ -164,6 +176,9 @@ button.recommend {
 
 /* Media queries */
 @media only screen and (max-width: 600px) {
+    body{
+        margin: 0 20px;
+    }
     .section-1{
         flex-direction: column;
     }
@@ -175,3 +190,4 @@ button.recommend {
         animation: none;
     }
 }
+

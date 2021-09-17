@@ -1,0 +1,27 @@
+.heading{
+    font-size: 36px;
+  text-align: center;
+}
+.recommendations-grid{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.recommendations-card{
+    position: relative;
+}
+.recommendations-card .heart-svg{
+    position: absolute;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    background-color: white;
+    padding: .8rem;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+    .recommendations-grid{
+        grid-template-columns: 1fr;
+    }
+}
