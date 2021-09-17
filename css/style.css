@@ -108,6 +108,7 @@ div.section-2 {
     display: flex;
     flex-direction: column;
     margin: 8rem auto 0rem auto;
+    position: relative;
 }
 
 h1.mood-selection-head {
@@ -159,20 +160,20 @@ div.mood-list :nth-child(2) img {
 }
 
 
-div.direct-recommend {
+div.capture-components {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-p.reason-for-direct {
+p.direction-for-capture {
     font-size: 18px;
     margin-bottom: 1rem;
     text-align: center;
 }
 
-button.recommend {
+button.capture-btn {
     height: 3.5rem;
     width: 15rem;
     border-radius: 2.5rem;
