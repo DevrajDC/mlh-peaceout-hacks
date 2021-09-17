@@ -73,6 +73,22 @@ p.intro-content {
     text-align: left;
 }
 
+@keyframes hero-animation {
+    0% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.astro-monk-illust{
+    transition: all 0.2s ease;
+    animation: hero-animation 4s infinite;
+}
+
 div.section-2 {
     display: flex;
     flex-direction: column;
@@ -86,7 +102,7 @@ h1.mood-selection-head {
 
 div.mood-selection-section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 4rem auto;
     align-items: center;
 }
@@ -118,11 +134,11 @@ div.mood-list div {
 
 div.mood-list div img {
     transition: all 0.2s ease;
-    animation: cloud-float 2s infinite;
+    animation: cloud-float 5s infinite;
 }
 
 div.mood-list :nth-child(2) img {
-    animation-delay: 2s;
+    animation-delay: 2.5s;
 }
 
 
@@ -146,4 +162,16 @@ button.recommend {
 
 
 
-
+/* Media queries */
+@media only screen and (max-width: 600px) {
+    .section-1{
+        flex-direction: column;
+    }
+    .mood-selection-section{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    div.mood-list div img{
+        animation: none;
+    }
+}
