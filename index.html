@@ -10,18 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Peaceout</title>
+
+    <style>
+        canvas {
+            position: absolute;
+            position: absolute;
+            top: 62rem;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 555;
+            height: 250px;
+            width: 250px;
+        }
+
+        #video {
+            position: absolute;
+            top: 37.5%;
+            left: 49.5%;
+            transform: translate(-50%, -50%);
+            z-index: 555;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="../index.html">Peaceout</a> 
+                <a href="../index.html">Peaceout</a>
             </div>
             <ul class="navbar-ul">
                 <li class="navbar-li">About</li>
-                <a href="./index.html#get-started"><button class="cta-btn">Get Started</button></a>
-                
+                <a href="./index.html#get-started"><button class="cta-btn get-started-btn" >Get Started</button></a>
+
             </ul>
         </div>
         <div class="section-1">
@@ -35,7 +57,7 @@
                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur
                 </p>
-                <a href="./index.html#get-started"><button class="cta-btn">Get Started</button></a>
+                <a href="./index.html#get-started"><button class="cta-btn get-started-btn">Get Started</button></a>
             </div>
             <div class="astro-monk-illust">
                 <img src="./assets/svgs/astronuatMonk.svg" alt="">
@@ -70,12 +92,13 @@
                     </div>
                 </div>
             </div>
+            <video id="video" height="190px" width="190px" autoplay muted></video>
         </div>
-        <div class="direct-recommend">
-            <p class="reason-for-direct">
-                Not sure? No worries, we got you!
+        <div class="capture-components">
+            <p class="direction-for-capture">
+                Capture your mood
             </p>
-            <a href="./pages/recommendation.html"><button class="cta-btn">Recommendations</button></a>
+          <button class="capture-btn" id="capture-btn">Capture</button>
         </div>
         <!-- footer -->
         <div class="footer">
@@ -89,6 +112,8 @@
             <a target="_blank" href="https://github.com/DevrajDC/mlh-peaceout-hacks">Github Repo</a>
         </div>
     </div>
+    <script src="face-api.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
