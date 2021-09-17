@@ -15,7 +15,7 @@ html, body {
     font-family: 'Poppins', sans-serif ;
     max-width: 1200px;
     margin:auto;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 a{
@@ -167,7 +167,9 @@ div.direct-recommend {
 }
 
 p.reason-for-direct {
-    font-size: 24px;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 button.recommend {
@@ -207,6 +209,9 @@ button.recommend {
     }
     div.mood-list div img{
         animation: none;
+    }
+    p.reason-for-direct{
+        margin-top: 2rem;
     }
 }
 
