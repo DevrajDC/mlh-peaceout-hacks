@@ -1,0 +1,19 @@
+{
+  "name": "mlh-peaceout-hacks",
+  "version": "1.0.0",
+  "description": "Peaceout made for peace day hackathon.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sarthakjain594/mlh-peaceout-hacks.git"
+  },
+ "contributors": ["Sarthak Jain <contact.sarthakjain@gmail.com>", "Devraj Chatribin <devrajchatribin9978@gmail.com>", "Pulkit Singh <singh.pulkit.0076@gmail.com>", "Anubhav Gupta <guptaanubhav907@gmail.com>"],
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/Sarthakjain594/mlh-peaceout-hacks/issues"
+  },
+  "homepage": "https://github.com/Sarthakjain594/mlh-peaceout-hacks#readme"
+}
