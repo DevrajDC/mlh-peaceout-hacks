@@ -1,1 +1,80 @@
+{
+   "happy": [
 
+      {
+         "music": [
+           {
+             "name": "example name",
+             "src": "../example/exampleaudio.mp4",    
+             "image": "../assets/exampleimage.png",
+           }
+         ],
+         "book": [
+           {
+             "name": "example happy name",
+             "src": "../example/examplebook.pdf",   
+             "image": "../assets/exampleimage.png",
+           }
+         ],
+         "audio-book": [
+           {
+             "name": "example name",
+             "src": "../example/examplebook.pdf",   
+             "image": "../assets/exampleimage.png",
+           }
+         ],
+      },
+   ],
+   "sad": [
+
+      {
+         "music": [
+           {
+             "name": "example name",
+             "src": "../example/exampleaudio.mp4",    
+             "image": "../assets/exampleimage.png",
+           }
+         ],
+         "book": [
+           {
+             "name": "example happy name",
+             "src": "../example/examplebook.pdf",   
+             "image": "../assets/exampleimage.png",
+           }
+         ],
+         "audio-book": [
+           {
+             "name": "example name",
+             "src": "../example/examplebook.pdf",   
+             "image": "../assets/exampleimage.png",
+           }
+         ],
+      },
+   ],
+   "angry": [
+
+      {
+         "music": [
+           {
+             "name": "example name",
+             "src": "../example/exampleaudio.mp4",    
+             "image": "../assets/exampleimage.png",
+           }
+         ],
+         "book": [
+           {
+             "name": "example happy name",
+             "src": "../example/examplebook.pdf",   
+             "image": "../assets/exampleimage.png",
+           }
+         ],
+         "audio-book": [
+           {
+             "name": "example name",
+             "src": "../example/examplebook.pdf",   
+             "image": "../assets/exampleimage.png",
+           }
+         ],
+      },
+   ],
+}
