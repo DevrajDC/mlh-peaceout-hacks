@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Peaceout</title>
+    <script  src="face-api.min.js"></script>
+    <script src="lodash.js"></script>
 
     <style>
         canvas {
@@ -19,8 +21,6 @@
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 555;
-            height: 250px;
-            width: 250px;
         }
 
         #video {
@@ -31,6 +31,13 @@
             z-index: 555;
             border-radius: 50%;
         }
+
+        h1.timer {
+            font-size:40px ;
+            color: white;
+            display: none;
+        }
+        
     </style>
 </head>
 
@@ -95,10 +102,12 @@
             <video id="video" height="190px" width="190px" autoplay muted></video>
         </div>
         <div class="capture-components">
+            <h1 class="timer" id="timer"></h1>
             <p class="direction-for-capture">
-                Capture your mood
+                Setting up server.After 10 seconds wait for the system to detect , then click on capture to proceed. PEACEOUT🤙
             </p>
           <button class="capture-btn" id="capture-btn">Capture</button>
+         
         </div>
         <!-- footer -->
         <div class="footer">
@@ -112,8 +121,9 @@
             <a target="_blank" href="https://github.com/DevrajDC/mlh-peaceout-hacks">Github Repo</a>
         </div>
     </div>
-    <script src="face-api.min.js"></script>
-    <script src="script.js"></script>
-</body>
+    
+    <script  src="script.js"></script>
 
+    
+</body>
 </html>
