@@ -17,7 +17,7 @@ const setTimer = () => {
 }
 
 const startProcess = async () => {
-  let predictedEspression;
+  let predictedExpression;
   //turning on camera and taking usre input
   const mediaStream = navigator.getUserMedia(
     { video: {} },
@@ -50,7 +50,7 @@ const startProcess = async () => {
           let maxvalueExp = _.last(_.sortBy(obj))
           for (property in obj) {
             if (obj[property] === maxvalueExp) {
-               predictedEspression = property
+               predictedExpression = property
             }
           }
        }
@@ -64,26 +64,26 @@ const startProcess = async () => {
   video.addEventListener('play', detectExpression)
   const captureImageExpressions = async () => {
     video.style.display = 'none'
-    if ( predictedEspression === 'happy' ){
-      window.open('http://127.0.0.1:5500/pages/recommendation.html', '_blank');
+    if ( predictedExpression === 'happy' ){
+      window.open('http://127.0.0.1:5500/pages/happy.html', '_blank');
     }
-    if ( predictedEspression === 'sad' ){
-      window.open('http://127.0.0.1:5500/pages/recommendation.html', '_blank');
+    if ( predictedExpression === 'sad' ){
+      window.open('http://127.0.0.1:5500/pages/sad.html', '_blank');
     }
-    if ( predictedEspression === 'neutral' ){
-      window.open('http://127.0.0.1:5500/pages/recommendation.html', '_blank');
+    if ( predictedExpression === 'neutral' ){
+      window.open('http://127.0.0.1:5500/pages/neutral.html', '_blank');
     }
-    if ( predictedEspression === 'angry' ){
-      window.open('http://127.0.0.1:5500/pages/recommendation.html', '_blank');
+    if ( predictedExpression === 'angry' ){
+      window.open('http://127.0.0.1:5500/pages/angry.html', '_blank');
     }
-    if ( predictedEspression === 'disgusted' ){
-      window.open('http://127.0.0.1:5500/pages/recommendation.html', '_blank');
+    if ( predictedExpression === 'disgusted' ){
+      window.open('http://127.0.0.1:5500/pages/disgusted.html', '_blank');
     }
-    if ( predictedEspression === 'surprised' ){
-      window.open('http://127.0.0.1:5500/pages/recommendation.html', '_blank');
+    if ( predictedExpression === 'surprised' ){
+      window.open('http://127.0.0.1:5500/pages/surprised.html', '_blank');
     }
-    if ( predictedEspression === 'fearful' ){
-      window.open('http://127.0.0.1:5500/pages/recommendation.html', '_blank');
+    if ( predictedExpression === 'fearful' ){
+      window.open('http://127.0.0.1:5500/pages/fearful.html', '_blank');
     }
     await location.reload()
   }
