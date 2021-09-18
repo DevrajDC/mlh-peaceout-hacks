@@ -9,31 +9,81 @@
     gap: 40px;
 }
 .recommendations-card{
+    padding: 0px;
     position: relative;
-}
-.pause{
-   position: absolute;
-   right: -0.2rem;
-   top: -0.3rem;
-}
-.add{
+    Background-color: #c5c5fe;
+    border-radius: 20px;
+    height: 400px;
+    width: 400px;
     display: flex;
     justify-content: center;
-    margin: 90px;
+    align-items: center;
 }
-.recommendations-card .heart-svg{
-    position: absolute;
-    bottom: 1.2rem;
-    right: 1.2rem;
-    background-color: white;
-    padding: .8rem;
-    border-radius: 50%;
+.recommendations-card:hover{
+    box-shadow: 2px 2px 15px 5px black;
+    transform: translateY(-10px);
+    transition: 0.3s ease-in-out;
 }
-.crds{
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
+.recommendations-card img{
     width: 100%;
+}
+
+.play{
+   margin: auto;
+   padding: 25px;
+   background: white;
+   position: absolute;
+   right: 1rem;
+   top: 1rem;
+   z-index: 1;
+   cursor: pointer;
+   border-radius: 50px;
+   height: 2rem;
+   width: 2rem;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 25px;
+   color: #8F00FF;
+}
+.play:hover{
+  box-shadow: 2px 2px 15px 5px grey;
+  transition: 0.5s ease-in-out;
+}
+
+.additional-card{
+    padding: 0px;
+    position: relative;
+    Background-color: #c5c5fe;
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.additional-card img{
+    width: 100%;
+}
+
+.additional-card:hover{
+    box-shadow: 2px 2px 15px 5px black;
+    transform: translateY(-10px);
+    transition: 0.3s ease-in-out;
+}
+
+.crds{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.add{
+    margin: 40px auto;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -41,3 +91,4 @@
         grid-template-columns: 1fr;
     }
 }
+

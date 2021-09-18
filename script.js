@@ -61,29 +61,30 @@ const startProcess = async () => {
        let faceExp = faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
     }, 500)
   }
+  let baseUrl = "https://mlh-peaceout-hacks.vercel.app";
   video.addEventListener('play', detectExpression)
   const captureImageExpressions = async () => {
     video.style.display = 'none'
     if ( predictedExpression === 'happy' ){
-      window.open('http://127.0.0.1:5500/pages/happy.html', '_blank');
+      window.open(`${baseUrl}/pages/happy.html`, '_blank');
     }
     if ( predictedExpression === 'sad' ){
-      window.open('http://127.0.0.1:5500/pages/sad.html', '_blank');
+      window.open(`${baseUrl}/pages/sad.html`, '_blank');
     }
     if ( predictedExpression === 'neutral' ){
-      window.open('http://127.0.0.1:5500/pages/neutral.html', '_blank');
+      window.open(`${baseUrl}/pages/neutral.html`, '_blank');
     }
     if ( predictedExpression === 'angry' ){
-      window.open('http://127.0.0.1:5500/pages/angry.html', '_blank');
+      window.open(`${baseUrl}/pages/angry.html`, '_blank');
     }
     if ( predictedExpression === 'disgusted' ){
-      window.open('http://127.0.0.1:5500/pages/disgusted.html', '_blank');
+      window.open(`${baseurl}/pages/angry.html`, '_blank');
     }
     if ( predictedExpression === 'surprised' ){
-      window.open('http://127.0.0.1:5500/pages/surprised.html', '_blank');
+      window.open(`${baseUrl}/pages/happy.html`, '_blank');
     }
     if ( predictedExpression === 'fearful' ){
-      window.open('http://127.0.0.1:5500/pages/fearful.html', '_blank');
+      window.open(`${baseUrl}/pages/sad.html`, '_blank');
     }
     await location.reload()
   }
