@@ -11,6 +11,16 @@
 .recommendations-card{
     position: relative;
 }
+.pause{
+   position: absolute;
+   right: -0.2rem;
+   top: -0.3rem;
+}
+.add{
+    display: flex;
+    justify-content: center;
+    margin: 90px;
+}
 .recommendations-card .heart-svg{
     position: absolute;
     bottom: 1.2rem;
@@ -18,6 +28,12 @@
     background-color: white;
     padding: .8rem;
     border-radius: 50%;
+}
+.crds{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
