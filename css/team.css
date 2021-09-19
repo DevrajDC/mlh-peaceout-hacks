@@ -1,0 +1,32 @@
+h1 {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    margin: 2rem auto 3rem auto;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    width: 80%;
+    margin: auto;
+}
+
+.team-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: fit-content;
+}
