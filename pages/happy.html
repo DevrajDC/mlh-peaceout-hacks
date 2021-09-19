@@ -25,12 +25,12 @@
         <div class="recommendations-card card1">
             <audio id="myAudio" src="../src/audio/wataboi-flavour-1164.mp3" loop></audio>
             <img src="../assets/svgs/music.svg" alt="" srcset="">
-            <a onclick="happyPlay()"><span name='play' class="play">▶︁</span></a>
+            <a onclick="happyPlay()"><span name='play' class="play" id="happyPlay">▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <audio id="myAudiobook" src="../src/audio/anger.mp3"></audio>
             <img src="../assets/svgs/astronautCoder.svg" alt="" srcset="">
-            <a onclick="happyBookPlay()"><span name='play' class="play">▶︁</span></a>
+            <a onclick="happyBookPlay()"><span name='play' class="play" id="happyBookPlay">▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <img src="../assets/svgs/astronautReading.svg" alt="" srcset="">
@@ -84,6 +84,8 @@
 
         const myAudio = document.getElementById('myAudio')
         const myAudiobook = document.getElementById('myAudiobook')
+        const happyPlayIcon = document.getElementById('happyPlay')
+        const happyBookIcon  = document.getElementById('happyBookPlay')
 
 
 
@@ -95,9 +97,11 @@
 
         myAudiobook.onplay = function () {
             isPlayingbook = true;
+            happyBookIcon.innerHTML = '||'
         };
         myAudiobook.onpause = function () {
             isPlayingbook = false;
+            happyBookIcon.innerHTML = '▶︁'
         };
 
 
@@ -108,9 +112,11 @@
 
         myAudio.onplay = function () {
             isPlaying = true;
+            happyPlayIcon.innerHTML = '||'
         };
         myAudio.onpause = function () {
             isPlaying = false;
+            happyPlayIcon.innerHTML = '▶︁'
         };
 
     </script>
