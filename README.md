@@ -22,10 +22,10 @@ It recognizes the human face and detects the user's facial emotional expressions
  - Figma
  - Deep Learning
  
- ## Team
+## Team
+<code><a href="https://github.com/DevrajDC"><img height="150px" width="150px" src="https://user-images.githubusercontent.com/71369943/133927264-39ba06ea-b4fb-406a-96fb-05c5ff82b521.png"></code>
 <code><a href="https://github.com/PulkitSinghDev"><img height="150px" width="150px" src="https://user-images.githubusercontent.com/71369943/133927260-346be9fd-a85e-442b-bd68-44c4e6cce804.png"></code>
 <code><a href="https://github.com/Sarthakjain594"><img height="150px" width="150px" src="https://user-images.githubusercontent.com/71369943/133927261-747e3c2c-d530-4311-9272-fcee22b4f977.png"></code>
-<code><a href="https://github.com/DevrajDC"><img height="150px" width="150px" src="https://user-images.githubusercontent.com/71369943/133927264-39ba06ea-b4fb-406a-96fb-05c5ff82b521.png"></code>
 <code><a href="https://github.com/anubhav201241"><img height="150px" width="150px" src="https://user-images.githubusercontent.com/71369943/133927375-852b743a-fc5b-40cf-89d2-01e2402d34d0.png"></code>
 
 ## Resources
