@@ -13,8 +13,6 @@
     position: relative;
     Background-color: #c5c5fe;
     border-radius: 20px;
-    height: 400px;
-    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,8 +55,6 @@
     position: relative;
     Background-color: #c5c5fe;
     border-radius: 20px;
-    width: 300px;
-    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
