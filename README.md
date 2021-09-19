@@ -3,7 +3,7 @@
 # Peace in Space
 
 ## Achievements: Best Space App powered by Space Force
-<img href="https://devpost.com/software/peace-in-space" src="https://user-images.githubusercontent.com/65373279/133935801-de956ab3-98c0-46a3-9cc1-8d70198c2201.png"/>
+<img href="https://devpost.com/software/peace-in-space" src="./assets/svgs/achievements.png"/>
 
 ## Inspiration
 We all experience stress in our day-to-day lives. This inspired us to create a platform where we could get refreshed, motivated, relaxed by listening to music and other activities as per our mood without filling any type of forms.
