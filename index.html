@@ -12,6 +12,9 @@
     <title>Peaceout</title>
     <script  src="face-api.min.js"></script>
     <script src="lodash.js"></script>
+    <!-- gsap animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
     <style>
         canvas {
@@ -43,6 +46,10 @@
 
 <body>
     <div class="container">
+        <!-- overlay -->
+        <div class="overlay">
+                <img src="./assets/svgs/loader (1).png" width="100%" height="100vh" alt="" srcset="">
+        </div>
         <div class="navbar">
             <div class="logo">
                 <a href="../index.html">Peaceout</a>
@@ -123,7 +130,6 @@
     </div>
     
     <script  src="script.js"></script>
-
     
 </body>
 </html>

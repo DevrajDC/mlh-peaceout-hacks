@@ -1,3 +1,10 @@
+// gsap animations
+TweenMax.to(".overlay", 1.2, {
+  top: "-120%",
+  ease: Expo.easeOut,
+  delay: 3,
+});
+
 
 const video = document.getElementById('video')
 const capture = document.getElementById('capture-btn')
