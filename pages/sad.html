@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,35 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/expressionpage.css">
 </head>
+
 <body>
     <div class="navbar">
         <div class="logo">
-            <a href="../index.html">Peaceout</a> 
+            <a href="../index.html">Peace in Space</a>
         </div>
         <ul class="navbar-ul">
             <li class="navbar-li">About</li>
             <a href="../../index.html#get-started"><button class="cta-btn">Get Started</button></a>
-            
+
         </ul>
     </div>
     <div class="recommendations-grid">
         <div class="recommendations-card card1">
             <audio id="myAudio" src="../src/audio/the-way-home-6674.mp3" loop></audio>
             <img src="../assets/svgs/music.svg" alt="" srcset="">
-            <a id="angerPlay"><span name='play' class="play">▶︁</span></a>
+            <a  onclick="sadPlay()"><span name='play' class="play" id="sadPlayIcon" >▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <audio id="myAudiobook" src="../src/audio/anger.mp3"></audio>
             <img src="../assets/svgs/astronautCoder.svg" alt="" srcset="">
-            <a id="angerbookplay"></a><span name='play' class="play">▶︁</span></a>
+            <a  onclick="sadBookPlay()"><span name='play' class="play" id="sadBookIcon">▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <img src="../assets/svgs/astronautReading.svg" alt="" srcset="">
-            <span name='play' class="play"
-                style="color: transparent; text-shadow: 0 0 0 #8F00FF; border: #8F00FF;">📖︁</span>
+            <a href="../src/pdfs/Depression-NationalInstituteofMentalHealth.pdf" target="_blank">
+                <span name='play' class="play" style="color: transparent; text-shadow: 0 0 0 #8F00FF; border: #8F00FF;">📖︁</span>
+            </a>
+            </div>
         </div>
 
     </div>
@@ -44,27 +48,27 @@
     </div>
     <div class="crds">
         <div class="additional-card">
-            <audio id="myAudio" src="../src/audio/windchime160.mp3" loop></audio>
+            <audio id="myAudio-add1" src="../src/audio/windchime160.mp3" loop></audio>
             <img src="../assets/svgs/astronautClown.svg" alt="" srcset="">
-            <a id="angerPlay"><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add1"><span name='play' class="play">▶︁</span></a>
         </div>
         <div class="additional-card">
-            <audio id="myAudio" src="../src/audio/night.mp3" loop></audio>
+            <audio id="myAudio-add2" src="../src/audio/night.mp3" loop></audio>
             <img src="../assets/svgs/fox.svg" alt="" srcset="">
-            <a id="angerPlay"><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add2"><span name='play' class="play">▶︁</span></a>
         </div>
         <div class="additional-card">
-            <audio id="myAudio" src="../src/audio/lightning.mp3" loop></audio>
+            <audio id="myAudio-add3" src="../src/audio/lightning.mp3" loop></audio>
             <img src="../assets/svgs/cloud.svg" alt="" srcset="">
-            <a id="angerPlay"><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add3"><span name='play' class="play">▶︁</span></a>
         </div>
         <div class="additional-card">
-            <audio id="myAudio" src="../src/audio/wind.mp3" loop></audio>
+            <audio id="myAudio-add4" src="../src/audio/wind.mp3" loop></audio>
             <img src="../assets/svgs/ballon.svg" alt="" srcset="">
-            <a id="angerPlay"><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add4" ><span name='play' class="play">▶︁</span></a>
         </div>
-        
-        
+
+
     </div>
     <div class="footer">
         <div class="footer-text">
@@ -76,7 +80,46 @@
         </div>
         <a target="_blank" href="https://github.com/DevrajDC/mlh-peaceout-hacks">Github Repo</a>
     </div>
-    
+    <script>
+            
+        const myAudio = document.getElementById('myAudio')
+        const myAudiobook = document.getElementById('myAudiobook')
+        const sadBookIcon = document.getElementById('sadBookIcon')
+        const sadPlayIcon = document.getElementById('sadPlayIcon')
+        
+        
+                var isPlayingbook = false;
+        
+                function sadBookPlay() {
+                  isPlayingbook ? myAudiobook.pause() : myAudiobook.play();
+                };
+                
+                myAudiobook.onplay = function() {
+                  isPlayingbook = true;
+                  sadBookIcon.innerHTML = '||'
+                };
+                myAudiobook.onpause = function() {
+                  isPlayingbook = false;
+                  sadBookIcon.innerHTML = '▶︁'
+                };
+        
+        
+                let isPlaying = false 
+                function sadPlay() {
+                    isPlaying ? myAudio.pause() : myAudio.play();
+                  };
+                  
+                  myAudio.onplay = function() {
+                    isPlaying = true;
+                    sadPlayIcon.innerHTML = '||'
+                  };
+                  myAudio.onpause = function() {
+                    isPlaying = false;
+                    sadPlayIcon.innerHTML = '▶︁'
+                  };
+        
+                </script>
     
 </body>
+
 </html>
