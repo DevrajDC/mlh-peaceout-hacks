@@ -2,7 +2,7 @@
 
 # Peace in Space
 
-## Achievements: Best Space App powered by Space Force
+## Achievements: Hackathon Winner
 <code><a target="_blank" href="https://devpost.com/software/peace-in-space"><img src="./assets/svgs/achievements.png"></a></code>
 
 ## Inspiration
