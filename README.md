@@ -17,6 +17,7 @@ It recognizes the human face and detects the user's facial emotional expressions
  - Javascript
  - Face API
  - Figma
+ - DeepLearning
  
  ## Team
 <code><a href="https://github.com/PulkitSinghDev"><img height="150px" width="150px" src="https://user-images.githubusercontent.com/71369943/133927260-346be9fd-a85e-442b-bd68-44c4e6cce804.png"></code>
