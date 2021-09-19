@@ -34,7 +34,7 @@
             <div class="recommendations-card card1">
                 <audio id="myAudiobook" src="../src/audio/anger.mp3"></audio>
                 <img src="../assets/svgs/astronautCoder.svg" alt="" srcset="">
-                <a onclick="angerbookPlay()"><span name='play' class="play" id="angerbookplay">▶︁</span></a>
+                <a onclick="angerbookPlay()"><span name='play' class="play" id="angerBookPlay">▶︁</span></a>
             </div>
             <div class="recommendations-card card1">
                 <img src="../assets/svgs/astronautReading.svg" alt="" srcset="">
@@ -88,6 +88,10 @@
             
 const myAudio = document.getElementById('myAudio')
 const myAudiobook = document.getElementById('myAudiobook')
+const angerPlay = document.getElementById('angerPlay')
+const angerBookPlay = document.getElementById('angerBookPlay')
+
+
 
 
 
@@ -99,9 +103,11 @@ const myAudiobook = document.getElementById('myAudiobook')
         
         myAudiobook.onplay = function() {
           isPlayingbook = true;
+          angerBookPlay.innerHTML = '||'
         };
         myAudiobook.onpause = function() {
           isPlayingbook = false;
+          angerBookPlay.innerHTML = '▶︁'
         };
 
 
@@ -112,9 +118,11 @@ const myAudiobook = document.getElementById('myAudiobook')
           
           myAudio.onplay = function() {
             playingBook = true;
+            angerPlay.innerHTML = '||'
           };
           myAudio.onpause = function() {
             playingBook = false;
+            angerPlay.innerHTML = '▶︁'
           };
 
         </script>

@@ -23,12 +23,12 @@
         <div class="recommendations-card card1">
             <audio id="myAudio" src="../src/audio/the-way-home-6674.mp3" loop></audio>
             <img src="../assets/svgs/music.svg" alt="" srcset="">
-            <a onclick="neutralPlay()"><span name='play' class="play">▶︁</span></a>
+            <a onclick="neutralPlay()"><span name='play' class="play" id="neutralPlayIcon">▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <audio id="myAudiobook" src="../src/audio/0110. My Dream - AShamaluevMusic.mp3"></audio>
             <img src="../assets/svgs/astronautCoder.svg" alt="" srcset="">
-            <a onclick="neutralBookPlay()"><span name='play' class="play">▶︁</span></a>
+            <a onclick="neutralBookPlay()"><span name='play' class="play" id="neutralBookIcon">▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <img src="../assets/svgs/astronautReading.svg" alt="" srcset="">
@@ -82,6 +82,8 @@
             
         const myAudio = document.getElementById('myAudio')
         const myAudiobook = document.getElementById('myAudiobook')
+        const neutralBookIcon = document.getElementById('neutralBookIcon')
+        const neutralPlayIcon = document.getElementById('neutralPlayIcon')
         
         
         
@@ -93,9 +95,12 @@
                 
                 myAudiobook.onplay = function() {
                   isPlayingbook = true;
+                  neutralBookIcon.innerHTML = '||'
+
                 };
                 myAudiobook.onpause = function() {
                   isPlayingbook = false;
+                  neutralBookIcon.innerHTML = '▶︁'
                 };
         
         
@@ -106,9 +111,11 @@
                   
                   myAudio.onplay = function() {
                     isPlaying = true;
+                    neutralPlayIcon.innerHTML = '||'
                   };
                   myAudio.onpause = function() {
                     isPlaying = false;
+                    neutralPlayIcon.innerHTML = '▶︁'
                   };
         
                 </script>

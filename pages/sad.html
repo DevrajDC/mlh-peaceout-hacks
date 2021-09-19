@@ -25,12 +25,12 @@
         <div class="recommendations-card card1">
             <audio id="myAudio" src="../src/audio/the-way-home-6674.mp3" loop></audio>
             <img src="../assets/svgs/music.svg" alt="" srcset="">
-            <a id="angerPlay" onclick="sadPlay()"><span name='play' class="play">▶︁</span></a>
+            <a  onclick="sadPlay()"><span name='play' class="play" id="sadPlayIcon" >▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <audio id="myAudiobook" src="../src/audio/anger.mp3"></audio>
             <img src="../assets/svgs/astronautCoder.svg" alt="" srcset="">
-            <a id="angerbookplay" onclick="sadBookPlay()"><span name='play' class="play">▶︁</span></a>
+            <a  onclick="sadBookPlay()"><span name='play' class="play" id="sadBookIcon">▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <img src="../assets/svgs/astronautReading.svg" alt="" srcset="">
@@ -80,14 +80,12 @@
         </div>
         <a target="_blank" href="https://github.com/DevrajDC/mlh-peaceout-hacks">Github Repo</a>
     </div>
-<<<<<<< HEAD
-
-=======
     <script>
             
         const myAudio = document.getElementById('myAudio')
         const myAudiobook = document.getElementById('myAudiobook')
-        
+        const sadBookIcon = document.getElementById('sadBookIcon')
+        const sadPlayIcon = document.getElementById('sadPlayIcon')
         
         
                 var isPlayingbook = false;
@@ -98,9 +96,11 @@
                 
                 myAudiobook.onplay = function() {
                   isPlayingbook = true;
+                  sadBookIcon.innerHTML = '||'
                 };
                 myAudiobook.onpause = function() {
                   isPlayingbook = false;
+                  sadBookIcon.innerHTML = '▶︁'
                 };
         
         
@@ -111,14 +111,15 @@
                   
                   myAudio.onplay = function() {
                     isPlaying = true;
+                    sadPlayIcon.innerHTML = '||'
                   };
                   myAudio.onpause = function() {
                     isPlaying = false;
+                    sadPlayIcon.innerHTML = '▶︁'
                   };
         
                 </script>
     
->>>>>>> 92942be933dc41a2d189b03e0a18f3e4ed8941e8
 </body>
 
 </html>
