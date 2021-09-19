@@ -23,12 +23,12 @@
         <div class="recommendations-card card1">
             <audio id="myAudio" src="../src/audio/the-way-home-6674.mp3" loop></audio>
             <img src="../assets/svgs/music.svg" alt="" srcset="">
-            <a id="angerPlay"><span name='play' class="play">▶︁</span></a>
+            <a onclick="neutralPlay()"><span name='play' class="play">▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <audio id="myAudiobook" src="../src/audio/anger.mp3"></audio>
             <img src="../assets/svgs/astronautCoder.svg" alt="" srcset="">
-            <a id="angerbookplay"></a><span name='play' class="play">▶︁</span></a>
+            <a onclick="neutralBookPlay()"><span name='play' class="play">▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <img src="../assets/svgs/astronautReading.svg" alt="" srcset="">
@@ -44,24 +44,24 @@
     </div>
     <div class="crds">
         <div class="additional-card">
-            <audio id="myAudio" src="../src/audio/windchime160.mp3" loop></audio>
+            <audio id="myAudio-add1" src="../src/audio/windchime160.mp3" loop></audio>
             <img src="../assets/svgs/astronautClown.svg" alt="" srcset="">
-            <a id="angerPlay"><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add1"><span name='play' class="play">▶︁</span></a>
         </div>
         <div class="additional-card">
-            <audio id="myAudio" src="../src/audio/night.mp3" loop></audio>
+            <audio id="myAudio-add2" src="../src/audio/night.mp3" loop></audio>
             <img src="../assets/svgs/fox.svg" alt="" srcset="">
-            <a id="angerPlay"><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add2"><span name='play' class="play">▶︁</span></a>
         </div>
         <div class="additional-card">
-            <audio id="myAudio" src="../src/audio/lightning.mp3" loop></audio>
+            <audio id="myAudio-add3" src="../src/audio/lightning.mp3" loop></audio>
             <img src="../assets/svgs/cloud.svg" alt="" srcset="">
-            <a id="angerPlay"><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add3"><span name='play' class="play">▶︁</span></a>
         </div>
         <div class="additional-card">
-            <audio id="myAudio" src="../src/audio/wind.mp3" loop></audio>
+            <audio id="myAudio-add4" src="../src/audio/wind.mp3" loop></audio>
             <img src="../assets/svgs/ballon.svg" alt="" srcset="">
-            <a id="angerPlay"><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add4"><span name='play' class="play">▶︁</span></a>
         </div>
         
         
@@ -76,7 +76,40 @@
         </div>
         <a target="_blank" href="https://github.com/DevrajDC/mlh-peaceout-hacks">Github Repo</a>
     </div>
-    
+    <script>
+            
+        const myAudio = document.getElementById('myAudio')
+        const myAudiobook = document.getElementById('myAudiobook')
+        
+        
+        
+                var isPlayingbook = false;
+        
+                function neutralBookPlay() {
+                  isPlayingbook ? myAudiobook.pause() : myAudiobook.play();
+                };
+                
+                myAudiobook.onplay = function() {
+                  isPlayingbook = true;
+                };
+                myAudiobook.onpause = function() {
+                  isPlayingbook = false;
+                };
+        
+        
+                let isPlaying = false 
+                function neutralPlay() {
+                    isPlaying ? myAudio.pause() : myAudio.play();
+                  };
+                  
+                  myAudio.onplay = function() {
+                    isPlaying = true;
+                  };
+                  myAudio.onpause = function() {
+                    isPlaying = false;
+                  };
+        
+                </script>
     
 </body>
 </html>
