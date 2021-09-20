@@ -103,7 +103,7 @@ const angerBookPlay = document.getElementById('angerBookPlay')
         
         myAudiobook.onplay = function() {
           isPlayingbook = true;
-          angerBookPlay.innerHTML = '||'
+          angerBookPlay.innerHTML = '<b>||</b>'
         };
         myAudiobook.onpause = function() {
           isPlayingbook = false;
@@ -118,7 +118,7 @@ const angerBookPlay = document.getElementById('angerBookPlay')
           
           myAudio.onplay = function() {
             playingBook = true;
-            angerPlay.innerHTML = '||'
+            angerPlay.innerHTML = '<b>||</b>'
           };
           myAudio.onpause = function() {
             playingBook = false;
