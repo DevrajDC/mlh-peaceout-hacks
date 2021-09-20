@@ -25,7 +25,7 @@ h1 {
 .play:hover{
     box-shadow: 2px 2px 15px 5px grey;
     transition: 0.5s ease-in-out;
-  }
+}
 
 .team-card:hover {
     box-shadow: 2px 2px 15px 5px black;
@@ -43,4 +43,16 @@ h1 {
     margin: auto;
     width: fit-content;
     height: fit-content;
+}
+
+.icon {
+    margin: 20px;
+    padding: 20px;
+    background-color: wheat;
+    border-radius: 50%;
+}
+
+.icon:hover {
+    box-shadow: 2px 2px 15px 5px grey;
+    transition: 0.3s ease-in-out;
 }
