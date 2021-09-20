@@ -18,6 +18,19 @@ h1 {
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    width: fit-content;
+    border-radius: 20px;
+}
+
+.play:hover{
+    box-shadow: 2px 2px 15px 5px grey;
+    transition: 0.5s ease-in-out;
+  }
+
+.team-card:hover {
+    box-shadow: 2px 2px 15px 5px black;
+    transform: translateY(-10px);
+    transition: 0.3s ease-in-out;
 }
 
 .socials {
@@ -29,4 +42,5 @@ h1 {
     left: 0;
     margin: auto;
     width: fit-content;
+    height: fit-content;
 }
