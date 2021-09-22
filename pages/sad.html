@@ -26,19 +26,19 @@
         <div class="recommendations-card card1">
             <audio id="myAudio" src="../src/audio/the-way-home-6674.mp3" loop></audio>
             <img src="../assets/svgs/music.svg" alt="" srcset="">
-            <a  onclick="sadPlay()"><span name='play' class="play" id="sadPlayIcon" >▶︁</span></a>
+            <a onclick="sadPlay()"><span name='play' class="play" id="sadPlayIcon">▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <audio id="myAudiobook" src="../src/audio/anger.mp3"></audio>
             <img src="../assets/svgs/astronautCoder.svg" alt="" srcset="">
-            <a  onclick="sadBookPlay()"><span name='play' class="play" id="sadBookIcon">▶︁</span></a>
+            <a onclick="sadBookPlay()"><span name='play' class="play" id="sadBookIcon">▶︁</span></a>
         </div>
         <div class="recommendations-card card1">
             <img src="../assets/svgs/astronautReading.svg" alt="" srcset="">
             <button name='play' class="play open"
-                    style="color: transparent; text-shadow: 0 0 0 #8F00FF; border: #8F00FF;">📖︁</button>
-            </div>
+                style="color: transparent; text-shadow: 0 0 0 #8F00FF; border: #8F00FF;">📖︁</button>
         </div>
+    </div>
 
     </div>
 
@@ -95,41 +95,39 @@
 
         const myAudio = document.getElementById('myAudio')
         const myAudiobook = document.getElementById('myAudiobook')
-        const angerPlay = document.getElementById('angerPlay')
-        const angerBookPlay = document.getElementById('angerBookPlay')
-
-
+        const sadPlayIcon = document.getElementById('sadPlayIcon')
+        const sadBookIcon  = document.getElementById('sadBookIcon')
 
 
 
         var isPlayingbook = false;
 
-        function angerbookPlay() {
+        function sadBookPlay() {
             isPlayingbook ? myAudiobook.pause() : myAudiobook.play();
         };
 
         myAudiobook.onplay = function () {
             isPlayingbook = true;
-            angerBookPlay.innerHTML = '<b>||</b>'
+            sadBookIcon.innerHTML = '<b>||</b>'
         };
         myAudiobook.onpause = function () {
             isPlayingbook = false;
-            angerBookPlay.innerHTML = '▶︁'
+            sadBookIcon.innerHTML = '▶︁'
         };
 
 
-        let playingBook = false
-        function angerPlayFunction() {
-            playingBook ? myAudio.pause() : myAudio.play();
+        let isPlaying = false
+        function sadPlay() {
+            isPlaying ? myAudio.pause() : myAudio.play();
         };
 
         myAudio.onplay = function () {
-            playingBook = true;
-            angerPlay.innerHTML = '<b>||</b>'
+            isPlaying = true;
+            sadPlayIcon.innerHTML = '<b>||</b>'
         };
         myAudio.onpause = function () {
-            playingBook = false;
-            angerPlay.innerHTML = '▶︁'
+            isPlaying = false;
+            sadPlayIcon.innerHTML = '▶︁'
         };
 
         $(document).ready(function () {

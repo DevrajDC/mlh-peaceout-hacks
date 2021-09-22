@@ -93,41 +93,39 @@
 
         const myAudio = document.getElementById('myAudio')
         const myAudiobook = document.getElementById('myAudiobook')
-        const angerPlay = document.getElementById('angerPlay')
-        const angerBookPlay = document.getElementById('angerBookPlay')
-
-
+        const neutralPlayIcon = document.getElementById('neutralPlayIcon')
+        const neutralBookIcon  = document.getElementById('neutralBookIcon')
 
 
 
         var isPlayingbook = false;
 
-        function angerbookPlay() {
+        function neutralBookPlay() {
             isPlayingbook ? myAudiobook.pause() : myAudiobook.play();
         };
 
         myAudiobook.onplay = function () {
             isPlayingbook = true;
-            angerBookPlay.innerHTML = '<b>||</b>'
+            neutralBookIcon.innerHTML = '<b>||</b>';
         };
         myAudiobook.onpause = function () {
             isPlayingbook = false;
-            angerBookPlay.innerHTML = '▶︁'
+            neutralBookIcon.innerHTML = '▶︁';
         };
 
 
-        let playingBook = false
-        function angerPlayFunction() {
-            playingBook ? myAudio.pause() : myAudio.play();
+        let isPlaying = false
+        function neutralPlay() {
+            isPlaying ? myAudio.pause() : myAudio.play();
         };
 
         myAudio.onplay = function () {
-            playingBook = true;
-            angerPlay.innerHTML = '<b>||</b>'
+            isPlaying = true;
+            neutralPlayIcon.innerHTML = '<b>||</b>';
         };
         myAudio.onpause = function () {
-            playingBook = false;
-            angerPlay.innerHTML = '▶︁'
+            isPlaying = false;
+            neutralPlayIcon.innerHTML = '▶︁';
         };
 
         $(document).ready(function () {
