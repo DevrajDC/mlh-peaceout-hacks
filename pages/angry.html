@@ -8,6 +8,7 @@
     <title>Recommendations</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/expressionpage.css">
+    <script src="../js/jquery-1.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -27,9 +28,11 @@
 
         <div class="recommendations-grid">
             <div class="recommendations-card card1">
-                <audio id="myAudio" src="../src/audio/OnlyMP3.net%20-%205%20Minute%20Meditation%20Music%20-%20with%20Earth%20Resonance%20Frequency%20for%20Deeper%20Relaxation-nkqnuxKj8Dk-192k-1630648975211.mp3" loop></audio>
+                <audio id="myAudio"
+                    src="../src/audio/OnlyMP3.net%20-%205%20Minute%20Meditation%20Music%20-%20with%20Earth%20Resonance%20Frequency%20for%20Deeper%20Relaxation-nkqnuxKj8Dk-192k-1630648975211.mp3"
+                    loop></audio>
                 <img src="../assets/svgs/music.svg" alt="" srcset="">
-                <a onclick="angerPlayFunction()" ><span name='play' class="play" id="angerPlay">▶︁</span></a>
+                <a onclick="angerPlayFunction()"><span name='play' class="play" id="angerPlay">▶︁</span></a>
             </div>
             <div class="recommendations-card card1">
                 <audio id="myAudiobook" src="../src/audio/anger.mp3"></audio>
@@ -38,58 +41,68 @@
             </div>
             <div class="recommendations-card card1">
                 <img src="../assets/svgs/astronautReading.svg" alt="" srcset="">
-                <a href="../src/pdfs/Controlling-Anger.pdf" target="_blank">
-                    <span name='play' class="play" style="color: transparent; text-shadow: 0 0 0 #8F00FF; border: #8F00FF;">📖︁</span>
-                </a>
-                </div>
+                <button name='play' class="play open"
+                    style="color: transparent; text-shadow: 0 0 0 #8F00FF; border: #8F00FF;">📖︁</button>
             </div>
+        </div>
 
+    </div>
+
+    <!--Popup-start-->
+    <div style="display: none; z-index: 1001; border-radius: 20px;" class="pop-outer">
+        <div class="pop-inner">
+            <button class="close">X</button>
+            <iframe width="80%" height="90%" src="../src/pdfs/Controlling-Anger.pdf"></iframe>
+            </a>
         </div>
-        <div class="add">
-            <h1>
-                Additional Customizations!
-            </h1>
+    </div>
+    <!--Popup end-->
+
+    <div class="add">
+        <h1>
+            Additional Customizations!
+        </h1>
+    </div>
+    <div class="crds">
+        <div class="additional-card">
+            <audio id="myAudio-add1" src="../src/audio/windchime160.mp3"></audio>
+            <img src="../assets/svgs/astronautClown.svg" alt="" srcset="">
+            <a id="angerPlay-add1"><span name='play' class="play">▶︁</span></a>
         </div>
-        <div class="crds">
-            <div class="additional-card">
-                <audio id="myAudio-add1" src="../src/audio/windchime160.mp3"></audio>
-                <img src="../assets/svgs/astronautClown.svg" alt="" srcset="">
-                <a id="angerPlay-add1"><span name='play' class="play">▶︁</span></a>
-            </div>
-            <div class="additional-card">
-                <audio id="myAudio-add2" src="../src/audio/night.mp3" loop></audio>
-                <img src="../assets/svgs/fox.svg" alt="" srcset="">
-                <a id="angerPlay-add2"><span name='play' class="play">▶︁</span></a>
-            </div>
-            <div class="additional-card">
-                <audio id="myAudio-add3" src="../src/audio/lightning.mp3" loop></audio>
-                <img src="../assets/svgs/cloud.svg" alt="" srcset="">
-                <a id="angerPlay-add3"><span name='play' class="play">▶︁</span></a>
-            </div>
-            <div class="additional-card">
-                <audio id="myAudio-add4" src="../src/audio/wind.mp3" loop></audio>
-                <img src="../assets/svgs/ballon.svg" alt="" srcset="">
-                <a id="angerPlay-add4"><span name='play' class="play">▶︁</span></a>
-            </div>
+        <div class="additional-card">
+            <audio id="myAudio-add2" src="../src/audio/night.mp3" loop></audio>
+            <img src="../assets/svgs/fox.svg" alt="" srcset="">
+            <a id="angerPlay-add2"><span name='play' class="play">▶︁</span></a>
+        </div>
+        <div class="additional-card">
+            <audio id="myAudio-add3" src="../src/audio/lightning.mp3" loop></audio>
+            <img src="../assets/svgs/cloud.svg" alt="" srcset="">
+            <a id="angerPlay-add3"><span name='play' class="play">▶︁</span></a>
+        </div>
+        <div class="additional-card">
+            <audio id="myAudio-add4" src="../src/audio/wind.mp3" loop></audio>
+            <img src="../assets/svgs/ballon.svg" alt="" srcset="">
+            <a id="angerPlay-add4"><span name='play' class="play">▶︁</span></a>
+        </div>
 
 
+    </div>
+    <div class="footer">
+        <div class="footer-text">
+            Made with ❤️ & <b>PEACE</b> by
+            <a href="https://github.com/DevrajDC"> DEVRAJ</a>,
+            <a href="https://github.com/Sarthakjain594"> SARTHAK</a>,
+            <a href="https://github.com/PulkitSinghDev"> PULKIT</a>,
+            <a href="https://github.com/anubhav201241"> ANUBHAV</a>.
         </div>
-        <div class="footer">
-            <div class="footer-text">
-                Made with ❤️ & <b>PEACE</b> by
-                <a href="https://github.com/DevrajDC"> DEVRAJ</a>,
-                <a href="https://github.com/Sarthakjain594"> SARTHAK</a>,
-                <a href="https://github.com/PulkitSinghDev"> PULKIT</a>,
-                <a href="https://github.com/anubhav201241"> ANUBHAV</a>.
-            </div>
-            <a target="_blank" href="https://github.com/DevrajDC/mlh-peaceout-hacks">Github Repo</a>
-        </div>
-        <script>
-            
-const myAudio = document.getElementById('myAudio')
-const myAudiobook = document.getElementById('myAudiobook')
-const angerPlay = document.getElementById('angerPlay')
-const angerBookPlay = document.getElementById('angerBookPlay')
+        <a target="_blank" href="https://github.com/DevrajDC/mlh-peaceout-hacks">Github Repo</a>
+    </div>
+    <script>
+
+        const myAudio = document.getElementById('myAudio')
+        const myAudiobook = document.getElementById('myAudiobook')
+        const angerPlay = document.getElementById('angerPlay')
+        const angerBookPlay = document.getElementById('angerBookPlay')
 
 
 
@@ -98,34 +111,43 @@ const angerBookPlay = document.getElementById('angerBookPlay')
         var isPlayingbook = false;
 
         function angerbookPlay() {
-          isPlayingbook ? myAudiobook.pause() : myAudiobook.play();
+            isPlayingbook ? myAudiobook.pause() : myAudiobook.play();
         };
-        
-        myAudiobook.onplay = function() {
-          isPlayingbook = true;
-          angerBookPlay.innerHTML = '<b>||</b>'
+
+        myAudiobook.onplay = function () {
+            isPlayingbook = true;
+            angerBookPlay.innerHTML = '<b>||</b>'
         };
-        myAudiobook.onpause = function() {
-          isPlayingbook = false;
-          angerBookPlay.innerHTML = '▶︁'
+        myAudiobook.onpause = function () {
+            isPlayingbook = false;
+            angerBookPlay.innerHTML = '▶︁'
         };
 
 
-        let playingBook = false 
+        let playingBook = false
         function angerPlayFunction() {
             playingBook ? myAudio.pause() : myAudio.play();
-          };
-          
-          myAudio.onplay = function() {
+        };
+
+        myAudio.onplay = function () {
             playingBook = true;
             angerPlay.innerHTML = '<b>||</b>'
-          };
-          myAudio.onpause = function() {
+        };
+        myAudio.onpause = function () {
             playingBook = false;
             angerPlay.innerHTML = '▶︁'
-          };
+        };
 
-        </script>
+        $(document).ready(function () {
+            $(".open").click(function () {
+                $(".pop-outer").fadeIn("slow");
+            });
+            $(".close").click(function () {
+                $(".pop-outer").fadeOut("slow");
+            });
+        });
+
+    </script>
 </body>
 
 </html>
