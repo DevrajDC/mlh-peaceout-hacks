@@ -32,13 +32,23 @@
         </div>
         <div class="recommendations-card card1">
             <img src="../assets/svgs/astronautReading.svg" alt="" srcset="">
-            <a href="../src/pdfs/100 ways to motivate yourself - Androbose.in.pdf" target="_blank">
-                <span name='play' class="play" style="color: transparent; text-shadow: 0 0 0 #8F00FF; border: #8F00FF;">📖︁</span>
-            </a>
+            <button name='play' class="play open"
+                    style="color: transparent; text-shadow: 0 0 0 #8F00FF; border: #8F00FF;">📖︁</button>
             </div>
         </div>
 
     </div>
+
+    <!--Popup-start-->
+    <div style="display: none; z-index: 1001; border-radius: 20px;" class="pop-outer">
+        <div class="pop-inner">
+            <button class="close">X</button>
+            <iframe width="80%" height="90%" src="../src/pdfs/Controlling-Anger.pdf"></iframe>
+            </a>
+        </div>
+    </div>
+    <!--Popup end-->
+
     <div class="add">
         <h1>
             Additional Customizations!
@@ -46,7 +56,7 @@
     </div>
     <div class="crds">
         <div class="additional-card">
-            <audio id="myAudio-add1" src="../src/audio/windchime160.mp3" loop></audio>
+            <audio id="myAudio-add1" src="../src/audio/windchime160.mp3"></audio>
             <img src="../assets/svgs/astronautClown.svg" alt="" srcset="">
             <a id="angerPlay-add1"><span name='play' class="play">▶︁</span></a>
         </div>
@@ -65,8 +75,8 @@
             <img src="../assets/svgs/ballon.svg" alt="" srcset="">
             <a id="angerPlay-add4"><span name='play' class="play">▶︁</span></a>
         </div>
-        
-        
+
+
     </div>
     <div class="footer">
         <div class="footer-text">
@@ -79,46 +89,56 @@
         <a target="_blank" href="https://github.com/DevrajDC/mlh-peaceout-hacks">Github Repo</a>
     </div>
     <script>
-            
+
         const myAudio = document.getElementById('myAudio')
         const myAudiobook = document.getElementById('myAudiobook')
-        const neutralBookIcon = document.getElementById('neutralBookIcon')
-        const neutralPlayIcon = document.getElementById('neutralPlayIcon')
-        
-        
-        
-                var isPlayingbook = false;
-        
-                function neutralBookPlay() {
-                  isPlayingbook ? myAudiobook.pause() : myAudiobook.play();
-                };
-                
-                myAudiobook.onplay = function() {
-                  isPlayingbook = true;
-                  neutralBookIcon.innerHTML = '<b>||</b>'
+        const angerPlay = document.getElementById('angerPlay')
+        const angerBookPlay = document.getElementById('angerBookPlay')
 
-                };
-                myAudiobook.onpause = function() {
-                  isPlayingbook = false;
-                  neutralBookIcon.innerHTML = '▶︁'
-                };
-        
-        
-                let isPlaying = false 
-                function neutralPlay() {
-                    isPlaying ? myAudio.pause() : myAudio.play();
-                  };
-                  
-                  myAudio.onplay = function() {
-                    isPlaying = true;
-                    neutralPlayIcon.innerHTML = '<b>||</b>'
-                  };
-                  myAudio.onpause = function() {
-                    isPlaying = false;
-                    neutralPlayIcon.innerHTML = '▶︁'
-                  };
-        
-                </script>
-    
+
+
+
+
+        var isPlayingbook = false;
+
+        function angerbookPlay() {
+            isPlayingbook ? myAudiobook.pause() : myAudiobook.play();
+        };
+
+        myAudiobook.onplay = function () {
+            isPlayingbook = true;
+            angerBookPlay.innerHTML = '<b>||</b>'
+        };
+        myAudiobook.onpause = function () {
+            isPlayingbook = false;
+            angerBookPlay.innerHTML = '▶︁'
+        };
+
+
+        let playingBook = false
+        function angerPlayFunction() {
+            playingBook ? myAudio.pause() : myAudio.play();
+        };
+
+        myAudio.onplay = function () {
+            playingBook = true;
+            angerPlay.innerHTML = '<b>||</b>'
+        };
+        myAudio.onpause = function () {
+            playingBook = false;
+            angerPlay.innerHTML = '▶︁'
+        };
+
+        $(document).ready(function () {
+            $(".open").click(function () {
+                $(".pop-outer").fadeIn("slow");
+            });
+            $(".close").click(function () {
+                $(".pop-outer").fadeOut("slow");
+            });
+        });
+
+    </script>
 </body>
+
 </html>

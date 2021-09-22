@@ -34,13 +34,23 @@
         </div>
         <div class="recommendations-card card1">
             <img src="../assets/svgs/astronautReading.svg" alt="" srcset="">
-            <a href="../src/pdfs/Leading-With-Happiness-Book-sample-chapters.pdf" target="_blank">
-                <span name='play' class="play" style="color: transparent; text-shadow: 0 0 0 #8F00FF; border: #8F00FF;">📖︁</span>
-            </a>
+            <button name='play' class="play open"
+                    style="color: transparent; text-shadow: 0 0 0 #8F00FF; border: #8F00FF;">📖︁</button>
             </div>
         </div>
 
     </div>
+
+    <!--Popup-start-->
+    <div style="display: none; z-index: 1001; border-radius: 20px;" class="pop-outer">
+        <div class="pop-inner">
+            <button class="close">X</button>
+            <iframe width="80%" height="90%" src="../src/pdfs/Controlling-Anger.pdf"></iframe>
+            </a>
+        </div>
+    </div>
+    <!--Popup end-->
+
     <div class="add">
         <h1>
             Additional Customizations!
@@ -48,24 +58,24 @@
     </div>
     <div class="crds">
         <div class="additional-card">
-            <audio id="myAudio-add1" src="../src/audio/windchime160.mp3" loop></audio>
+            <audio id="myAudio-add1" src="../src/audio/windchime160.mp3"></audio>
             <img src="../assets/svgs/astronautClown.svg" alt="" srcset="">
-            <a><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add1"><span name='play' class="play">▶︁</span></a>
         </div>
         <div class="additional-card">
             <audio id="myAudio-add2" src="../src/audio/night.mp3" loop></audio>
             <img src="../assets/svgs/fox.svg" alt="" srcset="">
-            <a><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add2"><span name='play' class="play">▶︁</span></a>
         </div>
         <div class="additional-card">
             <audio id="myAudio-add3" src="../src/audio/lightning.mp3" loop></audio>
             <img src="../assets/svgs/cloud.svg" alt="" srcset="">
-            <a><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add3"><span name='play' class="play">▶︁</span></a>
         </div>
         <div class="additional-card">
             <audio id="myAudio-add4" src="../src/audio/wind.mp3" loop></audio>
             <img src="../assets/svgs/ballon.svg" alt="" srcset="">
-            <a><span name='play' class="play">▶︁</span></a>
+            <a id="angerPlay-add4"><span name='play' class="play">▶︁</span></a>
         </div>
 
 
@@ -84,43 +94,53 @@
 
         const myAudio = document.getElementById('myAudio')
         const myAudiobook = document.getElementById('myAudiobook')
-        const happyPlayIcon = document.getElementById('happyPlay')
-        const happyBookIcon  = document.getElementById('happyBookPlay')
+        const angerPlay = document.getElementById('angerPlay')
+        const angerBookPlay = document.getElementById('angerBookPlay')
+
+
 
 
 
         var isPlayingbook = false;
 
-        function happyBookPlay() {
+        function angerbookPlay() {
             isPlayingbook ? myAudiobook.pause() : myAudiobook.play();
         };
 
         myAudiobook.onplay = function () {
             isPlayingbook = true;
-            happyBookIcon.innerHTML = '<b>||</b>'
+            angerBookPlay.innerHTML = '<b>||</b>'
         };
         myAudiobook.onpause = function () {
             isPlayingbook = false;
-            happyBookIcon.innerHTML = '▶︁'
+            angerBookPlay.innerHTML = '▶︁'
         };
 
 
-        let isPlaying = false
-        function happyPlay() {
-            isPlaying ? myAudio.pause() : myAudio.play();
+        let playingBook = false
+        function angerPlayFunction() {
+            playingBook ? myAudio.pause() : myAudio.play();
         };
 
         myAudio.onplay = function () {
-            isPlaying = true;
-            happyPlayIcon.innerHTML = '<b>||</b>'
+            playingBook = true;
+            angerPlay.innerHTML = '<b>||</b>'
         };
         myAudio.onpause = function () {
-            isPlaying = false;
-            happyPlayIcon.innerHTML = '▶︁'
+            playingBook = false;
+            angerPlay.innerHTML = '▶︁'
         };
 
-    </script>
+        $(document).ready(function () {
+            $(".open").click(function () {
+                $(".pop-outer").fadeIn("slow");
+            });
+            $(".close").click(function () {
+                $(".pop-outer").fadeOut("slow");
+            });
+        });
 
+    </script>
 </body>
 
 </html>
